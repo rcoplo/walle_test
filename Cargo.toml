@@ -1,0 +1,36 @@
+[package]
+name = "walle_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = {version = "1",features = ["derive"]}
+serde_json = "1"
+serde_yaml = "0.9"
+
+#sdk
+walle =  {git = "https://github.com/onebot-walle/walle.git",features = ["scheduler"]}
+
+
+tokio = {version = "1",features = ["full"]}
+
+
+rand = {version = "0.8",features = ["std_rng"]}
+
+reqwest = { version = "0", features = ["json"] }
+chrono = { version = "0", features = ["serde"] }
+
+regex = "1"
+
+rbs = { version = "4.3"}
+rbatis = { version = "4.3"}
+rbdc-sqlite = { version = "4.3" }
+
+og_image_writer = "0.10.3"
+once_cell = "1"
+
+[dev-dependencies]
+tokio-test = "*"
+
